@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "stdbool.h": "c",
+        "rasterimage.h": "c",
+        "applications.h": "c",
+        "matchsearch.h": "c"
+    }
+}

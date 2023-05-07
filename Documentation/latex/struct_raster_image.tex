@@ -1,0 +1,74 @@
+\hypertarget{struct_raster_image}{}\doxysection{Raster\+Image Struct Reference}
+\label{struct_raster_image}\index{RasterImage@{RasterImage}}
+
+
+{\ttfamily \#include $<$raster\+Image.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Image\+Type \mbox{\hyperlink{struct_raster_image_a4479a994a2f19c14d9c68a19c9d8061c}{type}}
+\item 
+unsigned int \mbox{\hyperlink{struct_raster_image_a85508d66a7f21584b3bd45305e0da93e}{height}}
+\item 
+unsigned int \mbox{\hyperlink{struct_raster_image_ac38be5d7e9aeb6891e02e1e94797d4c7}{width}}
+\item 
+unsigned int \mbox{\hyperlink{struct_raster_image_a07838a57d442a921e0515f67c0092979}{bytes\+Per\+Pixel}}
+\item 
+unsigned int \mbox{\hyperlink{struct_raster_image_a149ca55ed5a4afa03eba3897e6ef09d6}{bytes\+Per\+Row}}
+\item 
+void $\ast$ \mbox{\hyperlink{struct_raster_image_a9099109bbc1bc513113df4a17f5854ae}{raster}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the data type to store all relevant information about an image. After some thought, I have decided to store the 1D and 2D rasters as void$\ast$ rather than having separate unsigned char and float pointers 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_raster_image_a07838a57d442a921e0515f67c0092979}\label{struct_raster_image_a07838a57d442a921e0515f67c0092979}} 
+\index{RasterImage@{RasterImage}!bytesPerPixel@{bytesPerPixel}}
+\index{bytesPerPixel@{bytesPerPixel}!RasterImage@{RasterImage}}
+\doxysubsubsection{\texorpdfstring{bytesPerPixel}{bytesPerPixel}}
+{\footnotesize\ttfamily unsigned int Raster\+Image\+::bytes\+Per\+Pixel}
+
+Pixel depth \mbox{\Hypertarget{struct_raster_image_a149ca55ed5a4afa03eba3897e6ef09d6}\label{struct_raster_image_a149ca55ed5a4afa03eba3897e6ef09d6}} 
+\index{RasterImage@{RasterImage}!bytesPerRow@{bytesPerRow}}
+\index{bytesPerRow@{bytesPerRow}!RasterImage@{RasterImage}}
+\doxysubsubsection{\texorpdfstring{bytesPerRow}{bytesPerRow}}
+{\footnotesize\ttfamily unsigned int Raster\+Image\+::bytes\+Per\+Row}
+
+Number of bytes per row (which may be larger than bytes\+Per\+Pixel $\ast$ nb\+Cols if rows are padded to a particular word length (e.\+g. multiple of 16 or 32)) \mbox{\Hypertarget{struct_raster_image_a85508d66a7f21584b3bd45305e0da93e}\label{struct_raster_image_a85508d66a7f21584b3bd45305e0da93e}} 
+\index{RasterImage@{RasterImage}!height@{height}}
+\index{height@{height}!RasterImage@{RasterImage}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily unsigned int Raster\+Image\+::height}
+
+Number of rows (height) of the image \mbox{\Hypertarget{struct_raster_image_a9099109bbc1bc513113df4a17f5854ae}\label{struct_raster_image_a9099109bbc1bc513113df4a17f5854ae}} 
+\index{RasterImage@{RasterImage}!raster@{raster}}
+\index{raster@{raster}!RasterImage@{RasterImage}}
+\doxysubsubsection{\texorpdfstring{raster}{raster}}
+{\footnotesize\ttfamily void$\ast$ Raster\+Image\+::raster}
+
+Pointer to the image data, cast to a void$\ast$ pointer. To access the data, you would have to cast the pointer to the proper type, e.\+g. 
+\begin{DoxyItemize}
+\item {\ttfamily (int$\ast$) raster} 
+\item {\ttfamily (unsigned char$\ast$) raster} 
+\item {\ttfamily (int$\ast$) raster} 
+\item {\ttfamily (float$\ast$) raster} 
+\end{DoxyItemize}\mbox{\Hypertarget{struct_raster_image_a4479a994a2f19c14d9c68a19c9d8061c}\label{struct_raster_image_a4479a994a2f19c14d9c68a19c9d8061c}} 
+\index{RasterImage@{RasterImage}!type@{type}}
+\index{type@{type}!RasterImage@{RasterImage}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily Image\+Type Raster\+Image\+::type}
+
+Type of image stored \mbox{\Hypertarget{struct_raster_image_ac38be5d7e9aeb6891e02e1e94797d4c7}\label{struct_raster_image_ac38be5d7e9aeb6891e02e1e94797d4c7}} 
+\index{RasterImage@{RasterImage}!width@{width}}
+\index{width@{width}!RasterImage@{RasterImage}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily unsigned int Raster\+Image\+::width}
+
+Number of columns (width) of the image 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/mask/\+Desktop/412/\+Prog03/\+Image\+Library/include/raster\+Image.\+h\end{DoxyCompactItemize}

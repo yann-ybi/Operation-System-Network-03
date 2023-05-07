@@ -1,0 +1,60 @@
+\hypertarget{raster_image_8h_source}{}\doxysection{raster\+Image.\+h}
+\label{raster_image_8h_source}\index{/Users/mask/Desktop/412/Prog03/ImageLibrary/include/rasterImage.h@{/Users/mask/Desktop/412/Prog03/ImageLibrary/include/rasterImage.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ RASTER\_IMAGE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ RASTER\_IMAGE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ UNKNOWN\_IMAGE\_FILE\_TYPE\ =\ -\/1,}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ TGA\_COLOR\_FILE,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ 24-\/bit\ color\ image}}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ TGA\_GRAY\_FILE,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ 8-\/bit\ gray-\/level\ image}}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ PPM\_FILE,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ 24-\/bit\ color\ image}}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ PGM\_FILE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ 8-\/bit\ gray-\/level\ image}}
+\DoxyCodeLine{00014\ \}\ ImageFileType;}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ RGBA32\_RASTER,}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ GRAY\_RASTER,}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ FLOAT\_RASTER}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00036\ \}\ ImageType;}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00046\ \ \ \ \ ImageType\ \mbox{\hyperlink{struct_raster_image_a4479a994a2f19c14d9c68a19c9d8061c}{type}};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_raster_image_a85508d66a7f21584b3bd45305e0da93e}{height}};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_raster_image_ac38be5d7e9aeb6891e02e1e94797d4c7}{width}};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_raster_image_a07838a57d442a921e0515f67c0092979}{bytesPerPixel}};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_raster_image_a149ca55ed5a4afa03eba3897e6ef09d6}{bytesPerRow}};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}*\ \mbox{\hyperlink{struct_raster_image_a9099109bbc1bc513113df4a17f5854ae}{raster}};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{comment}{//\ \ /*\ Similarly\ here\ the\ 2D\ raster\ was\ cast\ to\ a\ void*\ pointer}}
+\DoxyCodeLine{00079\ \textcolor{comment}{//\ \ \ *\ \ and\ would\ need\ to\ be\ cast\ back\ to\ the\ proper\ type\ to\ be\ used,\ e.g.}}
+\DoxyCodeLine{00080\ \textcolor{comment}{//\ \ \ *\ \ <ul>}}
+\DoxyCodeLine{00081\ \textcolor{comment}{//\ \ \ *\ \ \ \ \ \ <li><tt>(int**)\ raster</tt></li>}}
+\DoxyCodeLine{00082\ \textcolor{comment}{//\ \ \ *\ \ \ \ \ \ <li><tt>(unsigned\ char**)\ raster</tt></li>}}
+\DoxyCodeLine{00083\ \textcolor{comment}{//\ \ \ *\ \ \ \ \ \ <li><tt>(int**)\ raster</tt></li>}}
+\DoxyCodeLine{00084\ \textcolor{comment}{//\ \ \ *\ \ \ \ \ \ <li><tt>(float**)\ raster</tt></li>}}
+\DoxyCodeLine{00085\ \textcolor{comment}{//\ \ \ *\ \ </ul>}}
+\DoxyCodeLine{00086\ \textcolor{comment}{//\ \ \ */}}
+\DoxyCodeLine{00087\ \textcolor{comment}{//\ \ void*\ raster2D;}}
+\DoxyCodeLine{00088\ \ \ \ \ }
+\DoxyCodeLine{00089\ \}\ \mbox{\hyperlink{struct_raster_image}{RasterImage}};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00097\ \mbox{\hyperlink{struct_raster_image}{RasterImage}}\ newImage(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ height,\ ImageType\ type);}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ \ RASTER\_IMAGE\_H}}
+
+\end{DoxyCode}
